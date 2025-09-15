@@ -1,0 +1,80 @@
+/* General Page Styling */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 20px;
+  background: #f4f7fa;
+  color: #333;
+}
+
+h1 {
+  margin-bottom: 30px;
+}
+
+section {
+  margin: 40px 0;
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  background: #fff;
+}
+
+/* ------------------------------
+   Part 1: CSS Transitions & Animations
+--------------------------------- */
+
+/* Button Hover Effect (transition) */
+.fancy-btn {
+  padding: 10px 20px;
+  background: #3498db;
+  border: none;
+  color: white;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.4s ease, transform 0.4s ease;
+}
+.fancy-btn:hover {
+  background: #2ecc71;
+  transform: scale(1.1);
+}
+
+/* Keyframe Pulse Animation */
+.pulse-box {
+  width: 80px;
+  height: 80px;
+  margin: 20px auto;
+  background: #e74c3c;
+  border-radius: 12px;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.2); opacity: 0.7; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* ------------------------------
+   Part 3: JS + CSS Together
+--------------------------------- */
+
+.box {
+  width: 100px;
+  height: 100px;
+  margin: 20px auto;
+  background: #9b59b6;
+  border-radius: 10px;
+  transition: transform 0.5s ease, background 0.5s ease;
+}
+
+/* Animation class added by JS */
+.box.animate {
+  background: #f39c12;
+  animation: bounce 1s ease-in-out infinite alternate;
+}
+
+@keyframes bounce {
+  from { transform: translateY(0); }
+  to { transform: translateY(-60px); }
+}
